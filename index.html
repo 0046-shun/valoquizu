@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VALO QUIZ — スキル名ルーレット</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Teko:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="grid-bg" aria-hidden="true"></div>
+
+    <header class="top">
+      <p class="brand">VALO<span>QUIZ</span></p>
+      <nav class="tabs" aria-label="クイズ切り替え">
+        <a class="tab is-active" href="index.html" aria-current="page">SKILL</a>
+        <a class="tab" href="credit.html">CREDIT</a>
+      </nav>
+      <p class="tag">AGENT × KEY → 正式スキル名</p>
+    </header>
+
+    <main class="stage">
+      <section class="reels" aria-label="ルーレット">
+        <div class="reel-block">
+          <div class="reel-label">AGENT</div>
+          <div class="reel agent-reel" id="agent-reel">
+            <div class="pointer" aria-hidden="true"></div>
+            <div class="reel-window">
+              <div class="reel-strip" id="agent-strip"></div>
+            </div>
+            <div class="agent-name" id="agent-name">？</div>
+          </div>
+        </div>
+
+        <div class="x-mark" aria-hidden="true">×</div>
+
+        <div class="reel-block">
+          <div class="reel-label">KEY</div>
+          <div class="reel key-reel" id="key-reel">
+            <div class="pointer" aria-hidden="true"></div>
+            <div class="reel-window">
+              <div class="reel-strip" id="key-strip"></div>
+            </div>
+            <div class="key-name" id="key-name">？</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls">
+        <button type="button" class="spin-btn" id="spin-btn">
+          <span class="spin-btn__glitch">SPIN</span>
+          <span class="spin-btn__sub">両方まわす</span>
+        </button>
+      </section>
+
+      <section class="answer-panel">
+        <button
+          type="button"
+          class="answer-btn"
+          id="answer-btn"
+          disabled
+          aria-expanded="false"
+        >
+          <span class="answer-btn__hint" id="answer-hint"
+            >答えはクリックで開く</span
+          >
+          <span class="answer-btn__value" id="answer-value" hidden></span>
+        </button>
+        <p class="howto">
+          口頭で宣言 → クリックで正解確認。入力はありません。
+        </p>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span
+        >Agent art © Riot Games · sourced from
+        <a
+          href="https://playvalorant.com/ja-jp/agents/"
+          target="_blank"
+          rel="noopener"
+          >playvalorant.com</a
+        ></span
+      >
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
