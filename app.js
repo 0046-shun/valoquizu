@@ -69,9 +69,8 @@ let agentSequence = buildAgentStrip();
 let keySequence = buildKeyStrip();
 
 function itemHeight(kind) {
-  return kind === "agent"
-    ? parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--agent-h"))
-    : parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--key-h"));
+  const strip = kind === "agent" ? agentStrip : keyStrip;
+  return strip.firstElementChild.getBoundingClientRect().height;
 }
 
 function resetAnswer() {
@@ -131,13 +130,18 @@ function animateStrip(strip, sequence, targetIndex, kind, duration) {
       strip.style.transition = `transform ${duration}ms cubic-bezier(0.12, 0.85, 0.08, 1)`;
       strip.style.transform = `translateY(${finalY}px)`;
 
+      let done = false;
       const onEnd = () => {
+        if (done) return;
+        done = true;
         strip.removeEventListener("transitionend", onEnd);
         reel.classList.remove("is-spinning");
         reel.classList.add("is-landed");
         resolve(sequence[targetIndex]);
       };
       strip.addEventListener("transitionend", onEnd);
+      // transitionend never fires while the tab is hidden
+      setTimeout(onEnd, duration + 100);
     });
   });
 }

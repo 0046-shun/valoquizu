@@ -196,17 +196,115 @@
 }
 
 @media (max-width: 640px) {
+  .stage {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "agent wallet"
+      "items items"
+      "controls controls"
+      "answer answer";
+    column-gap: 0.75rem;
+    row-gap: 0.6rem;
+  }
+
   .loadout {
-    grid-template-columns: 1fr;
+    display: contents;
   }
 
   .loadout__agent {
-    width: 160px;
-    justify-self: center;
+    grid-area: agent;
+    width: 76px;
+  }
+
+  .loadout__agent figcaption {
+    padding: 0.25rem;
+    font-size: 0.75rem;
+  }
+
+  .wallet {
+    grid-area: wallet;
+    align-self: center;
+  }
+
+  .wallet__label {
+    font-size: 1.1rem;
+  }
+
+  .wallet__amount {
+    font-size: 3.4rem;
+  }
+
+  .loadout__items {
+    grid-area: items;
+    gap: 0.35rem;
   }
 
   .item {
-    grid-template-columns: 52px 64px 1fr auto;
+    grid-template-columns: 44px 52px 1fr auto;
     gap: 0.5rem;
+    padding: 0.35rem 0.6rem;
+  }
+
+  .item__icon {
+    height: 26px;
+  }
+
+  .item--skill .item__icon img {
+    height: 24px;
+  }
+
+  .item--armor .item__icon img {
+    height: 22px;
+  }
+
+  .item__kind {
+    font-size: 0.6rem;
+    letter-spacing: 0.02em;
+  }
+
+  .item__name {
+    font-size: 0.9rem;
+  }
+
+  .item__badge {
+    font-size: 0.6rem;
+  }
+
+  .item__price {
+    font-size: 1.15rem;
+  }
+
+  .controls {
+    grid-area: controls;
+    margin-top: 0.25rem;
+  }
+
+  .answer-panel {
+    grid-area: answer;
+    margin-top: 0;
+  }
+
+  .credit-answer__verdict {
+    font-size: 1.4rem;
+  }
+
+  .credit-answer__breakdown {
+    margin-top: 0.15rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 640px) and (max-height: 720px) {
+  .loadout__agent {
+    width: 64px;
+  }
+
+  .wallet__amount {
+    font-size: 3rem;
+  }
+
+  .item {
+    padding: 0.25rem 0.6rem;
   }
 }

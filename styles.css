@@ -465,22 +465,132 @@ body {
 
 @media (max-width: 640px) {
   :root {
-    --agent-w: 210px;
-    --agent-h: 280px;
-    --key-h: 100px;
+    --agent-w: min(46vw, 190px, calc((100dvh - 400px) * 0.75));
+    --agent-h: calc(var(--agent-w) * 4 / 3);
+    --key-h: 96px;
   }
 
-  .x-mark {
-    margin-bottom: 0;
-    width: 100%;
-    text-align: center;
-    order: 3;
-    font-size: 2rem;
+  .top {
+    padding-top: 0.75rem;
+  }
+
+  .brand {
+    font-size: 2.2rem;
+  }
+
+  .tabs {
+    margin-top: 0.4rem;
+  }
+
+  .tab {
+    font-size: 1.1rem;
+    padding: 0.2rem 1rem 0;
+  }
+
+  .tag {
+    margin-top: 0.3rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  .stage {
+    padding: 0.75rem 0.75rem 0.5rem;
   }
 
   .reels {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.4rem;
   }
 
+  .reel-label {
+    font-size: 1.1rem;
+  }
+
+  .key-reel {
+    width: min(30vw, 120px);
+  }
+
+  .key-glyph {
+    font-size: 3.6rem;
+  }
+
+  .agent-name,
+  .key-name {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.4rem;
+  }
+
+  .key-name {
+    font-size: 1.4rem;
+  }
+
+  .x-mark {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .reel-block {
+    gap: 0.3rem;
+  }
+
+  .controls {
+    margin-top: 0.75rem;
+  }
+
+  .spin-btn {
+    min-width: min(200px, 60vw);
+    padding: 0.45rem 1rem 0.25rem;
+  }
+
+  .spin-btn__glitch {
+    font-size: 1.6rem;
+  }
+
+  .spin-btn__sub {
+    display: none;
+  }
+
+  .answer-panel {
+    margin-top: 0.6rem;
+  }
+
+  .answer-btn {
+    min-height: 0;
+    padding: 0.6rem 0.9rem;
+  }
+
+  .answer-btn__hint {
+    font-size: 0.85rem;
+  }
+
+  .answer-btn__value {
+    font-size: 1.3rem;
+  }
+
+  .howto {
+    display: none;
+  }
+
+  .foot {
+    padding: 0 1rem 0.75rem;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 640px) and (max-height: 720px) {
+  .brand {
+    font-size: 1.9rem;
+  }
+
+  .tag {
+    display: none;
+  }
+}
+
+@media (hover: none) {
+  .spin-btn,
+  .answer-btn,
+  .tab {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
