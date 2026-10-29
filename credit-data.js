@@ -139,12 +139,13 @@ window.CREDIT_DATA = {
         },
         {
           "name": "カーブボール",
-          "price": 250,
-          "icon": "assets/abilities/a24.png"
+          "price": 0,
+          "icon": "assets/abilities/a24.png",
+          "extra": 250
         },
         {
           "name": "ホットハンド",
-          "price": 0,
+          "price": 200,
           "icon": "assets/abilities/a25.png"
         }
       ]
@@ -159,7 +160,7 @@ window.CREDIT_DATA = {
           "icon": "assets/abilities/a26.png"
         },
         {
-          "name": "ディウアー",
+          "name": "デバウアー",
           "price": 200,
           "icon": "assets/abilities/a27.png"
         },
@@ -197,7 +198,7 @@ window.CREDIT_DATA = {
       "skills": [
         {
           "name": "フェイクアウト",
-          "price": 100,
+          "price": 200,
           "icon": "assets/abilities/a32.png"
         },
         {
@@ -209,7 +210,7 @@ window.CREDIT_DATA = {
           "name": "ゲートクラッシュ",
           "price": 0,
           "icon": "assets/abilities/a34.png",
-          "extra": 200
+          "extra": 150
         }
       ]
     },
@@ -224,7 +225,7 @@ window.CREDIT_DATA = {
         },
         {
           "name": "リレーボルト",
-          "price": 300,
+          "price": 200,
           "icon": "assets/abilities/a36.png"
         },
         {
@@ -240,19 +241,18 @@ window.CREDIT_DATA = {
       "skills": [
         {
           "name": "コンティンジェンシー",
-          "price": 250,
+          "price": 200,
           "icon": "assets/abilities/a38.png"
         },
         {
           "name": "アンダーカット",
-          "price": 250,
+          "price": 300,
           "icon": "assets/abilities/a39.png"
         },
         {
           "name": "ダブルタップ",
           "price": 0,
-          "icon": "assets/abilities/a40.png",
-          "extra": 150
+          "icon": "assets/abilities/a40.png"
         }
       ]
     },
@@ -350,18 +350,18 @@ window.CREDIT_DATA = {
       "image": "assets/agents/harbor.png",
       "skills": [
         {
-          "name": "カスケード",
-          "price": 150,
+          "name": "ストームサージ",
+          "price": 200,
           "icon": "assets/abilities/a53.png"
         },
         {
           "name": "コーヴ",
-          "price": 350,
+          "price": 0,
           "icon": "assets/abilities/a54.png"
         },
         {
           "name": "ハイタイド",
-          "price": 0,
+          "price": 300,
           "icon": "assets/abilities/a55.png"
         }
       ]
@@ -415,7 +415,7 @@ window.CREDIT_DATA = {
       "skills": [
         {
           "name": "アフターショック",
-          "price": 350,
+          "price": 200,
           "icon": "assets/abilities/a62.png"
         },
         {
@@ -457,7 +457,7 @@ window.CREDIT_DATA = {
       "skills": [
         {
           "name": "フラグ/メント",
-          "price": 250,
+          "price": 200,
           "icon": "assets/abilities/a68.png"
         },
         {
@@ -520,7 +520,7 @@ window.CREDIT_DATA = {
       "skills": [
         {
           "name": "ナノスワーム",
-          "price": 250,
+          "price": 200,
           "icon": "assets/abilities/a77.png"
         },
         {
@@ -562,7 +562,7 @@ window.CREDIT_DATA = {
       "skills": [
         {
           "name": "バリアオーブ",
-          "price": 400,
+          "price": 300,
           "icon": "assets/abilities/a83.png"
         },
         {
@@ -588,7 +588,7 @@ window.CREDIT_DATA = {
         },
         {
           "name": "ヘッドハンター",
-          "price": 150,
+          "price": 100,
           "icon": "assets/abilities/a87.png",
           "note": "1発"
         },
@@ -605,7 +605,7 @@ window.CREDIT_DATA = {
       "skills": [
         {
           "name": "グラヴィネット",
-          "price": 200,
+          "price": 0,
           "icon": "assets/abilities/a89.png"
         },
         {
@@ -615,7 +615,7 @@ window.CREDIT_DATA = {
         },
         {
           "name": "バリアメッシュ",
-          "price": 0,
+          "price": 300,
           "icon": "assets/abilities/a91.png"
         }
       ]
@@ -626,7 +626,7 @@ window.CREDIT_DATA = {
       "skills": [
         {
           "name": "レーザーヴァイン",
-          "price": 200,
+          "price": 150,
           "icon": "assets/abilities/a92.png"
         },
         {

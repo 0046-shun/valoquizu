@@ -18,8 +18,8 @@ window.VALOQUIZ = {
     slug: "phoenix",
     image: "assets/agents/phoenix.png",
     skills: {
-      Q: "カーブボール",
-      E: "ホットハンド",
+      Q: "ホットハンド",
+      E: "カーブボール",
       C: "ブレイズ",
       X: "ラン・イット・バック",
     },
@@ -29,7 +29,7 @@ window.VALOQUIZ = {
     slug: "reyna",
     image: "assets/agents/reyna.png",
     skills: {
-      Q: "ディウアー",
+      Q: "デバウアー",
       E: "ディスミス",
       C: "リーア",
       X: "エンプレス",
@@ -128,9 +128,9 @@ window.VALOQUIZ = {
     slug: "harbor",
     image: "assets/agents/harbor.png",
     skills: {
-      Q: "コーヴ",
-      E: "ハイタイド",
-      C: "カスケード",
+      Q: "ハイタイド",
+      E: "コーヴ",
+      C: "ストームサージ",
       X: "レコニング",
     },
   },
@@ -261,8 +261,8 @@ window.VALOQUIZ = {
     image: "assets/agents/deadlock.png",
     skills: {
       Q: "ソニックセンサー",
-      E: "バリアメッシュ",
-      C: "グラヴィネット",
+      E: "グラヴィネット",
+      C: "バリアメッシュ",
       X: "アナイアレーション",
     },
   },
