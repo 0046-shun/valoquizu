@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VALO QUIZ — トーナメント</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Teko:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="tournament.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="grid-bg" aria-hidden="true"></div>
+
+    <header class="top">
+      <p class="brand">VALO<span>QUIZ</span></p>
+      <nav class="tabs" aria-label="クイズ切り替え">
+        <a class="tab" href="index.html">SKILL</a>
+        <a class="tab" href="credit.html">CREDIT</a>
+        <a class="tab is-active" href="tournament.html" aria-current="page">CUP</a>
+      </nav>
+      <p class="tag">トーナメント — 回す回数でハンデ</p>
+    </header>
+
+    <main class="stage cup">
+      <div class="champion" id="champion" hidden></div>
+
+      <section class="panel">
+        <h2 class="panel__title">PLAYERS<span>回す回数（ハンデ）</span></h2>
+        <ul class="players" id="players"></ul>
+        <form class="add-player" id="add-player">
+          <input type="text" id="new-player" placeholder="プレイヤーを追加" maxlength="16" />
+          <button type="submit">追加</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2 class="panel__title">MATCHUPS<span>1回戦の組み合わせ</span></h2>
+        <div class="slots" id="slots"></div>
+        <div class="panel__actions">
+          <button type="button" class="ghost-btn" id="shuffle-btn">ランダムに組む</button>
+          <button type="button" class="ghost-btn ghost-btn--danger" id="reset-btn">全部リセット</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2 class="panel__title">BRACKET<span>トーナメント表</span></h2>
+        <div class="bracket" id="bracket"></div>
+        <div class="panel__actions">
+          <button type="button" class="ghost-btn ghost-btn--danger" id="reset-bracket-btn">トーナメント表をリセット</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span>大会データはこのブラウザに保存されます（サイトデータを消すまで残ります）</span>
+    </footer>
+
+    <script src="tournament-store.js"></script>
+    <script src="tournament.js"></script>
+  </body>
+</html>
